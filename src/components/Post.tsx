@@ -38,7 +38,7 @@ export const Post: React.FC<Props> = ({ summaries }) => {
     return (
       <div style={{ margin: "auto", maxWidth: "1024px" }}>
         <h1>{summary.title}</h1>
-        <hr />
+        <hr style={{ borderTop: "dashed 5px" }} />
         {content ? <NotionRenderer blockMap={content} /> : <br />}
       </div>
     );

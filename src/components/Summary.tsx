@@ -22,7 +22,7 @@ export const Summary: React.FC<Props> = ({ summary }) => {
       <Link to={`/posts/${summary.slug}`} style={{ textDecoration: 'none', color: 'black' }}>
         <h1>{summary.date.split("-").join(".")} - {summary.title}</h1>
       </Link>
-      <hr />
+      <hr style={{ borderTop: "dashed 5px" }} />
     </div>
   );
 }

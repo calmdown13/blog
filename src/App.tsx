@@ -24,7 +24,9 @@ export const App: React.FC = () => {
   }, [])
 
   return (
+    <div style={{ marginLeft: "10px", marginRight: "10px" }} >
       <Routes summaries={summaries} />
+    </div>
   );
 }
 
