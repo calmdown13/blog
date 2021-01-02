@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import { BlockMapType, NotionRenderer } from "react-notion";
-import { PostSummary } from "./Summary";
+import { PostSummary, emojiFromTag } from "./Summary";
 import "react-notion/src/styles.css";
 import "prismjs/themes/prism-tomorrow.css";
 
@@ -37,7 +37,7 @@ export const Post: React.FC<Props> = ({ summaries }) => {
   if (summary && content) {
     return (
       <div style={{ margin: "auto", maxWidth: "1024px" }}>
-        <h1>{summary.title}</h1>
+        <h1>{emojiFromTag(summary.tag)} {summary.title} <span style={{color: "#9B9D9A"}}>- {summary.date.split("-").join("/")}</span></h1>
         <hr style={{ borderTop: "dashed 5px" }} />
         {content ? <NotionRenderer blockMap={content} /> : <br />}
       </div>

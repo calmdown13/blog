@@ -7,7 +7,7 @@ const Header: React.FC = () => {
       <br />
       <div style={{ display: "flex", alignItems: "center" }}>
         <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>
-          <h1 style={{}}>🥧 Bits and Pieces 🥧</h1>
+          <h1 style={{}}>📝 Bits and Pieces</h1>
         </Link>
         <a href="https://github.com/calmdown13" style={{ marginLeft: "auto" }}>
           <img src="/githubLogo.png" width="32px" height="32px" alt="" ></img>
