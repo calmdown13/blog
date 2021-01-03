@@ -8,19 +8,7 @@ export interface PostSummary {
   title: string,
   slug: string,
   date: string,
-  tag: string,
-}
-
-export const emojiFromTag = (tag: string): string => {
-  console.log(tag)
-  switch (tag) {
-    case "books":
-      return "📚";
-    case "code":
-      return "💻";
-    default:
-      return "";
-  }
+  emoji: string,
 }
 
 interface Props {
@@ -28,11 +16,10 @@ interface Props {
 }
 
 export const Summary: React.FC<Props> = ({ summary }) => {
-  console.log(summary)
   return (
     <div style={{ margin: "auto", maxWidth: "1024px" }}>
       <Link to={`/posts/${summary.slug}`} style={{ textDecoration: 'none', color: 'black' }}>
-        <h1>{emojiFromTag(summary.tag)} {summary.title} <span style={{color: "#9B9D9A"}}>- {summary.date.split("-").join("/")}</span></h1>
+        <h1>{summary.emoji} {summary.title} <span style={{color: "#9B9D9A"}}>- {summary.date.split("-").join("/")}</span></h1>
       </Link>
       <hr style={{ borderTop: "dashed 5px" }} />
     </div>

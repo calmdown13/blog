@@ -13,7 +13,6 @@ interface Props {
 }
 
 export const Routes: React.FC<Props> = ({ summaries }) => {
-  console.log(summaries)
   return (
     <BrowserRouter>
       <>
