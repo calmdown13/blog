@@ -6,8 +6,7 @@ search_exclude: true
 ---
 
 {% if site.categories.size > 0 %}
-<h2>Contents</h2>
-
+<h2 style="margin-top:8px !important;">Tags</h2>
   {% assign categories = "" | split:"" %}
   {% for c in site.categories %}
     {% assign categories = categories | push: c[0] %}
